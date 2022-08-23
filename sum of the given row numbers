@@ -1,0 +1,26 @@
+//row sum value program
+#include<stdio.h>
+int main()
+{
+	int a[100][100],i,j,sum=0;
+	int row,column;
+	printf("enter the number of rows\n");
+	scanf("%d",&row);
+	printf("enter the number of columns:\n");
+	scanf("%d",&column);
+	printf("enter the array elements:\n");
+	for(i=0;i<row;i++)
+	{
+		for(j=0;j<column;j++)
+		{
+			scanf("%d",&a[i][j]);
+		}
+	}
+	printf("enter the row value to calculate the sum:\n");
+	scanf("%d",&i);
+	for(j=0;j<column;j++)
+	{
+		sum=sum+a[i-1][j];
+	}
+	printf("%d",sum);
+}
